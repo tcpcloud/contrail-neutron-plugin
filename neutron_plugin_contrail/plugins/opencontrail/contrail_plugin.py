@@ -83,7 +83,6 @@ class NeutronPluginContrailCoreV2(neutron_plugin_base_v2.NeutronPluginBaseV2,
 
     # patch VIF_TYPES
     portbindings.__dict__['VIF_TYPE_VROUTER'] = 'vrouter'
-    portbindings.VIF_TYPES.append(portbindings.VIF_TYPE_VROUTER)
 
     def _parse_class_args(self):
         """Parse the contrailplugin.ini file.

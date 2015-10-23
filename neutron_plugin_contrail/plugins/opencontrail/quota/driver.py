@@ -24,7 +24,10 @@ import requests
 from cfgm_common import exceptions as vnc_exc
 from vnc_api import vnc_api
 
-from neutron.db.quota import api as quota_api
+try:
+    from neutron.db.quota import api as quota_api
+except ImportError:
+    pass
 
 LOG = logging.getLogger(__name__)
 
